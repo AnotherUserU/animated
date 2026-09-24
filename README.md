@@ -1,6 +1,30 @@
-# Clove Story: animasi 8-bit untuk Nusajawa Clove
+# Clove Story: animasi untuk Nusajawa Clove
 
-Film pendek 8-bit (sekitar 72 detik, looping) tentang perjalanan cengkeh Nusajawa, dari bibit sampai ke tangan pembeli di luar negeri. Ditulis dengan JavaScript + Canvas biasa. Tanpa library, tanpa file gambar, cuma satu file: `clove-story.js`.
+Film pendek (sekitar 72 detik, looping) tentang perjalanan cengkeh Nusajawa, dari bibit sampai ke tangan pembeli di luar negeri. Ditulis dengan JavaScript + Canvas biasa. Tanpa library dan tanpa file gambar. Ada dua gaya dengan cerita yang sama. Pilih salah satu, masing-masing cukup satu file:
+
+| File | Tag | Gaya | Demo |
+|------|-----|------|------|
+| `clove-line.js` | `<clove-line>` | **Line art minimalis**: garis tipis menggambar sendiri di atas kertas krem, warna aksen cuma di matahari, kuncup cengkeh, dan label. Teks memakai font website kamu | `line.html` |
+| `clove-story.js` | `<clove-story>` | **8-bit pixel art**: gaya game retro, kotak dialog RPG, musik chiptune | `index.html` |
+
+## Versi line art (`clove-line.js`)
+
+```html
+<script src="/clove-line.js" defer></script>
+<clove-line accent="#b5562c" cta-href="#contact"></clove-line>
+```
+
+Atributnya sama dengan versi 8-bit (lihat tabel **Pengaturan** di bawah), ditambah:
+
+| Atribut | Default | Fungsi |
+|---------|---------|--------|
+| `theme` | `light` | `light` = kertas krem + tinta cokelat tua, `dark` = kertas gelap + tinta krem |
+
+Bedanya dengan versi 8-bit: tidak ada musik, teks narasi fade (bukan efek ketik), dan font mengikuti `font-family` halaman. Kalau dipakai di Next.js, caranya sama seperti contoh di bawah: ganti `clove-story` dengan `clove-line`.
+
+---
+
+## Versi 8-bit (`clove-story.js`)
 
 | # | Adegan | Isi |
 |---|--------|-----|
