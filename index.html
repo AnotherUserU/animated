@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clove Story Demo</title>
+  <meta name="description" content="8-bit animated short: the journey of a Nusajawa clove from Nganjuk to buyers worldwide.">
+  <script src="clove-story.js" defer></script>
+  <style>
+    :root { --bg: #f7f1e8; --ink: #2a1d15; --muted: #6b5a4c; --accent: #b5562c; }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) { --bg: #16100c; --ink: #f3e9dc; --muted: #b5a391; }
+    }
+    :root[data-theme="dark"] { --bg: #16100c; --ink: #f3e9dc; --muted: #b5a391; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    main { max-width: 1040px; margin: 0 auto; padding: 56px 16px 80px; }
+    .eyebrow { color: var(--accent); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; font-size: 13px; margin: 0 0 8px; }
+    h1 { font-size: clamp(28px, 4vw, 42px); line-height: 1.15; margin: 0 0 12px; }
+    p.lead { color: var(--muted); max-width: 640px; margin: 0 0 28px; }
+    clove-story { box-shadow: 0 20px 50px -20px rgba(60, 30, 10, .45); border-radius: 14px; }
+    .note { margin-top: 16px; font-size: 14px; color: var(--muted); }
+    code { background: rgba(127, 90, 60, .12); padding: 2px 6px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">From tree to shipment</p>
+    <h1>The journey of a Nusajawa clove</h1>
+    <p class="lead">Planted in Nganjuk, hand-picked, sun-dried, lab-tested, packed in 50&nbsp;kg jute sacks and shipped from Surabaya to buyers in 15+ countries.</p>
+
+    <clove-story accent="#b5562c" cta-href="#contact"></clove-story>
+
+    <p class="note">Click to pause, drag the bar to scrub, <code>ID</code> switches to Bahasa Indonesia, and the speaker icon turns on the chiptune.</p>
+  </main>
+</body>
+</html>
